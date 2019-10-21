@@ -5,9 +5,9 @@ import { faTasks, faDotCircle, faClipboardList, faClipboardCheck, faTrashAlt, fa
 class Header extends React.Component {
     render () {
         return (
-            <div>
+            <div className="text-white text-center">
                 <h1>Task Manager <FontAwesomeIcon icon = {faClipboardList} /></h1>
-                <h3>98 and 	&#190; percent</h3>
+                <h5>98 and 	&#190; &#160;percent</h5>
             </div>
         );
     }
