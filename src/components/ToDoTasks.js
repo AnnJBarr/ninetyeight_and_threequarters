@@ -2,15 +2,15 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTasks, faDotCircle, faClipboardList, faClipboardCheck, faTrashAlt, faNotesMedical } from '@fortawesome/free-solid-svg-icons';
 
-class CompletedTasks extends React.Component {
+class ToDoTasks extends React.Component {
     render () {
         return (
             <div>
-              Completed  
+               To Do 
             </div>
             
         );
     }
 }
 
-export default CompletedTasks;
+export default ToDoTasks;

@@ -16,8 +16,6 @@ function App() {
       <AddTask />
       <RemainingTasks count = {6}/>
       <TasksArea />
-      <TaskItem />
-      <CompletedTasks />
       <Footer />
 
     </div>
