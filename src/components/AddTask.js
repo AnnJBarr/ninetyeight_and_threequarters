@@ -18,7 +18,6 @@ class AddTask extends React.Component {
                                     <textarea className="form-control" aria-label="With textarea"></textarea>
                                 </div>
                             </div>
-                            <br />
                             <a href="#" className="btn btn-outline-light">Add task</a>
                         </div>
                     </div>
