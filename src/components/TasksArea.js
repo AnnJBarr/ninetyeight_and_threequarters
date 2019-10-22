@@ -9,9 +9,9 @@ class TasksArea extends React.Component {
     render() {
         return (
             <div className="row">
-                {/* <div className="col-lg-2">
+                <div className="col-lg-2">
 
-                </div> */}
+                </div>
                 <div id="to-do-tasks" className="mx-auto col-12 col-lg-4">
                     <ToDoTasks />
                 </div>
@@ -19,12 +19,11 @@ class TasksArea extends React.Component {
                 <div id="done-tasks" className="mx-auto col-12 col-lg-4">
                     <CompletedTasks />
                 </div>
-                {/* <div className="col-lg-2">
+                <div className="col-lg-2">
 
-                </div> */}
+                </div>
             </div>
-            
-            
+
         );
     }
 }
