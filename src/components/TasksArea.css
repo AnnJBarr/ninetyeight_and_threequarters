@@ -10,7 +10,7 @@ body {
     text-decoration: line-through;
     /* color: green; */
   }
-  
+
   #donedot{
     color:green;
 }
@@ -18,11 +18,3 @@ body {
 #tododot {
     color: red;
 }
-
-/* #to-do-tasks {
-    color: red;
-}
-
-#done-tasks {
-    color: green;
-} */

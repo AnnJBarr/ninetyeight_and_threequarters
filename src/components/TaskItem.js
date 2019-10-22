@@ -5,24 +5,24 @@ import { faTasks, faDotCircle, faClipboardList, faClipboardCheck, faTrashAlt, fa
 class TaskItem extends React.Component {
     render() {
         return (
-            <div className="row">
-                    <div className="col-1">
-                        {this.props.done === true ? <p id="donedot"><FontAwesomeIcon icon={faDotCircle} /></p> : <p id="tododot"><FontAwesomeIcon icon={faDotCircle} /></p>}
-                    </div>
-                   
-                    <div className="col-8 border">
-                        {this.props.done === true ? <p id="doneid">{this.props.text}</p> : <p>{this.props.text}</p>}
-                        
-                    </div>
-                    <div className="col-1 text-right">
-                    {this.props.done === true ? <p id="doneid"> </p> : <p><FontAwesomeIcon icon={faClipboardCheck} /></p>}
-                    </div>
-                    <div className="col-1">
-                        <FontAwesomeIcon icon={faTrashAlt} />
-                    </div>
+            <div className="row taskRow">
+                <div className="col-1">
+                    {this.props.done === true ? <div id="donedot"><FontAwesomeIcon icon={faDotCircle} /></div> : <div id="tododot"><FontAwesomeIcon icon={faDotCircle} /></div>}
+                </div>
 
-                
-                
+                <div className="col-9">
+                    {this.props.done === true ? <div id="doneid">{this.props.text}</div> : <div>{this.props.text}</div>}
+
+                </div>
+                <div className="col-1 text-right">
+                    {this.props.done === true ? <div id="doneid"></div> : <div><FontAwesomeIcon icon={faClipboardCheck} /></div>}
+                </div>
+                <div className="col-1">
+                    <FontAwesomeIcon icon={faTrashAlt} />
+                </div>
+
+
+
             </div>
 
         );

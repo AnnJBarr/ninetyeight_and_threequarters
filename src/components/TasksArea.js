@@ -8,19 +8,16 @@ import CompletedTasks from "./CompletedTasks";
 class TasksArea extends React.Component {
     render() {
         return (
-            <div className="row">
+            <div className="row mx-auto appRow">
                 <div className="col-lg-2">
 
                 </div>
-                <div id="to-do-tasks" className="mx-auto col-12 col-lg-4">
+                <div id="to-do-tasks" className=" col-12 col-lg-4">
                     <ToDoTasks />
                 </div>
 
-                <div id="done-tasks" className="mx-auto col-12 col-lg-4">
+                <div id="done-tasks" className=" col-12 col-lg-4">
                     <CompletedTasks />
-                </div>
-                <div className="col-lg-2">
-
                 </div>
             </div>
 
