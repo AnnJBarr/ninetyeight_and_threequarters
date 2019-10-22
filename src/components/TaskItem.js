@@ -10,7 +10,7 @@ class TaskItem extends React.Component {
                     {this.props.done === true ? <div id="donedot"><FontAwesomeIcon icon={faDotCircle} /></div> : <div id="tododot"><FontAwesomeIcon icon={faDotCircle} /></div>}
                 </div>
 
-                <div className="col-9">
+                <div className="col-8">
                     {this.props.done === true ? <div id="doneid">{this.props.text}</div> : <div>{this.props.text}</div>}
 
                 </div>

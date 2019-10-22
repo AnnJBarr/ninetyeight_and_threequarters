@@ -19,6 +19,9 @@ class TasksArea extends React.Component {
                 <div id="done-tasks" className=" col-12 col-lg-4">
                     <CompletedTasks />
                 </div>
+                <div className="col-lg-2">
+
+                </div>
             </div>
 
         );
