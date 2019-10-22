@@ -27,7 +27,7 @@ And never mix up your right foot with your left.
 
 And will you succeed? 
 Yes! You will, indeed! 
-(98 and &#190; &#160; percent guaranteed.) <FontAwesomeIcon icon = {faQuoteRight} /></p>
+(98 and &#190; &#160;percent guaranteed.) <FontAwesomeIcon icon = {faQuoteRight} /></p>
                 <footer className="blockquote-footer">Dr. Seuss <cite title="Source Title">Oh the places you’ll go</cite></footer>
                 </blockquote> 
 

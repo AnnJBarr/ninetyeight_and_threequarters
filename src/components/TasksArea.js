@@ -1,5 +1,5 @@
 import React from "react";
-import TaskItem from './TaskItem';
+import './TasksArea.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleDown, faTasks, faDotCircle, faClipboardList, faClipboardCheck, faTrashAlt, faNotesMedical } from '@fortawesome/free-solid-svg-icons';
 import ToDoTasks from "./ToDoTasks";
@@ -8,29 +8,23 @@ import CompletedTasks from "./CompletedTasks";
 class TasksArea extends React.Component {
     render() {
         return (
-            <div id="tasks-area" className="row">
-                <div className="col-lg-2">
+            <div className="row">
+                {/* <div className="col-lg-2">
 
-                </div>
-                <div className="col-12 col-lg-4 mx-auto">
+                </div> */}
+                <div id="to-do-tasks" className="mx-auto col-12 col-lg-4">
                     <ToDoTasks />
                 </div>
 
-                <div className="col-12 col-lg-4 mx-auto">
+                <div id="done-tasks" className="mx-auto col-12 col-lg-4">
                     <CompletedTasks />
                 </div>
-                <div className="col-lg-2">
+                {/* <div className="col-lg-2">
 
-                </div>
+                </div> */}
             </div>
             
-            //<div>
-            //     This is my task areas
-
-            //     <CompletedTasks />
-
-            //</div>
-
+            
         );
     }
 }

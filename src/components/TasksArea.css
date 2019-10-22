@@ -1,0 +1,28 @@
+body {
+    color: purple;
+}
+#task-button {
+    color: purple;
+    float: right;
+  }
+
+  #doneid {
+    text-decoration: line-through;
+    /* color: green; */
+  }
+  
+  #donedot{
+    color:green;
+}
+
+#tododot {
+    color: red;
+}
+
+/* #to-do-tasks {
+    color: red;
+}
+
+#done-tasks {
+    color: green;
+} */
