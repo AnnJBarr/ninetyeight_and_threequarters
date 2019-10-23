@@ -6,6 +6,11 @@ body {
     float: right;
   }
 
+#icon-buttons {
+  color: purple;
+  float: none;
+}
+
 #doneid {
     text-decoration: line-through;
   }

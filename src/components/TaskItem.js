@@ -15,10 +15,10 @@ class TaskItem extends React.Component {
 
                 </div>
                 <div className="col-1 text-right">
-                    {this.props.done === true ? <div id="doneid"></div> : <div><button id="task-button" className="btn"><FontAwesomeIcon icon={faClipboardCheck} /></button></div>}
+                    {this.props.done === true ? <div id="doneid"></div> : <div><button className="btn" id="icon-buttons"><FontAwesomeIcon icon={faClipboardCheck} /></button></div>}
                 </div>
                 <div className="col-1">
-                    <button id="task-button" className="btn"><FontAwesomeIcon icon={faTrashAlt} /></button>
+                    <button id="icon-buttons" className="btn" ><FontAwesomeIcon icon={faTrashAlt} /></button>
                 </div>
 
 
