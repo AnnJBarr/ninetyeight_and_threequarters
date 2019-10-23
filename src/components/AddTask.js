@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTasks, faDotCircle, faClipboardList, faClipboardCheck, faTrashAlt, faNotesMedical } from '@fortawesome/free-solid-svg-icons';
+import { faNotesMedical } from '@fortawesome/free-solid-svg-icons';
 
 class AddTask extends React.Component {
     render() {
@@ -18,7 +18,7 @@ class AddTask extends React.Component {
                                     <textarea className="form-control" aria-label="With textarea"></textarea>
                                 </div>
                             </div>
-                            <a href="#" className="btn btn-outline-light">Add task</a>
+                            <button className="btn btn-outline-light">Add task</button>
                         </div>
                     </div>
                 </div>

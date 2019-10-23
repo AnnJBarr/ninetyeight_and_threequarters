@@ -1,7 +1,5 @@
 import React from "react";
 import './TasksArea.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronCircleDown, faTasks, faDotCircle, faClipboardList, faClipboardCheck, faTrashAlt, faNotesMedical } from '@fortawesome/free-solid-svg-icons';
 import ToDoTasks from "./ToDoTasks";
 import CompletedTasks from "./CompletedTasks";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTasks, faDotCircle, faClipboardList, faClipboardCheck, faTrashAlt, faNotesMedical } from '@fortawesome/free-solid-svg-icons';
+import { faDotCircle, faClipboardCheck, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 class TaskItem extends React.Component {
     render() {
@@ -15,10 +15,10 @@ class TaskItem extends React.Component {
 
                 </div>
                 <div className="col-1 text-right">
-                    {this.props.done === true ? <div id="doneid"></div> : <div><FontAwesomeIcon icon={faClipboardCheck} /></div>}
+                    {this.props.done === true ? <div id="doneid"></div> : <div><button id="task-button" className="btn"><FontAwesomeIcon icon={faClipboardCheck} /></button></div>}
                 </div>
                 <div className="col-1">
-                    <FontAwesomeIcon icon={faTrashAlt} />
+                    <button id="task-button" className="btn"><FontAwesomeIcon icon={faTrashAlt} /></button>
                 </div>
 
 

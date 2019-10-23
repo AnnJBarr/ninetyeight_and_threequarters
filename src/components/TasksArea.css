@@ -6,11 +6,11 @@ body {
     float: right;
   }
 
-  #doneid {
+#doneid {
     text-decoration: line-through;
   }
 
-  #donedot{
+#donedot{
     color:green;
 }
 

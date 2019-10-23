@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faQuoteLeft, faQuoteRight, faTasks, faDotCircle, faClipboardList, faClipboardCheck, faTrashAlt, faNotesMedical } from '@fortawesome/free-solid-svg-icons';
+import { faQuoteLeft, faQuoteRight} from '@fortawesome/free-solid-svg-icons';
 
 class Footer extends React.Component {
     render() {

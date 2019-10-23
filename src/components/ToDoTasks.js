@@ -1,7 +1,7 @@
 import React from "react";
 import TaskItem from './TaskItem';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronCircleDown, faTasks, faDotCircle, faClipboardList, faClipboardCheck, faTrashAlt, faNotesMedical } from '@fortawesome/free-solid-svg-icons';
+import { faChevronCircleDown, faClipboardList } from '@fortawesome/free-solid-svg-icons';
 
 class ToDoTasks extends React.Component {
     render() {
@@ -16,7 +16,7 @@ class ToDoTasks extends React.Component {
                         <TaskItem text="This is the second item on the to do list, which is long so I need the text to wrap"  done={false}/>
                         <TaskItem text="Third item on the to do list" done={false} />
                     </div>
-                    <a href="#" id="task-button" className="btn"><FontAwesomeIcon icon={faChevronCircleDown} /></a>
+                    <button id="task-button" className="btn"><FontAwesomeIcon icon={faChevronCircleDown} /></button>
                 </div>
             </div>
 
