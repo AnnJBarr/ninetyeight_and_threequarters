@@ -20,8 +20,8 @@ class ToDoTasks extends React.Component {
                 <div  className="card-body">
                     <div className="card-text" >
                     {/* <ToDoTasks areaText={this.props.taskText} areaAdded={this.props.taskAddedDate} areaDone={this.props.taskDone} areaDoneDate={this.props.taskDoneDate}/> */}
-
-                    <TaskItem text={this.props.areaText} done={this.props.areaDone} addedDate={this.props.areaAdded} doneDate={this.props.areaDoneDate} key={this.props.areaId} />
+                    <TaskItem />
+                    {/* <TaskItem text={this.props.text} done={this.props.done} dateAdded={this.props.dateAdded} dateCompleted={this.props.dateCompleted} key={this.props.id} /> */}
                     {/* {dateSortedCompleted.map(task => { */}
           
                         {/* <TaskItem text="This is the first item on the to do list" done={false}/>

@@ -6,7 +6,9 @@ import AddTask from './components/AddTask';
 import RemainingTasks from './components/RemainingTasks';
 import TasksArea from './components/TasksArea';
 import Footer from './components/Footer';
-
+import ToDoTasks from "./components/ToDoTasks";
+import CompletedTasks from "./components/CompletedTasks";
+import TaskItem from "./components/TaskItem";
 
 class App extends Component {
 
@@ -21,14 +23,54 @@ class App extends Component {
 
     ]
   }
-  
+  createCopy= () => {
+  const tasksCopy = this.state.tasks.slice();
+  console.log(tasksCopy);
+  }
+
+
+  doneTask = () => {
+    const tasksCopy = this.state.tasks.slice();
+    tasksCopy.done = true
+
+    this.setState({
+      tasks: tasksCopy
+    });
+  }
+
   render () {
+    // const completedTasks=this.state.tasks.filter(task => {
+    //   return task.completed;
+    // });
+
+    // const dateSortedCompleted = completedTasks.sort((a, b) => b.date - a.date);
+    // console.log(dateSortedCompleted);
+    // Completed listed most recent first
+
+    const incompleteTasks=this.state.tasks.filter (task => {
+      return task.completed ? false : true
+    });
+
+
+    const dateSortedIncomplete = incompleteTasks.sort((a, b) => a.dateAdded - b.dateAdded);
+    //most recent to bottom of list
+
   return (
     <div className="container">
       <Header />
       <AddTask />
       <RemainingTasks count = {this.state.tasks.length}/>
-      <TasksArea taskText={this.state.tasks.text} taskDone={this.state.tasks.done} taskAddedDate={this.state.tasks.dateAdded} taskDoneDate={this.state.tasks.dateCompleted} taskId={this.state.tasks.id}/>
+      <TasksArea text={this.state.tasks.text} done={this.state.tasks.done} dateAdded={this.state.tasks.dateAdded} dateCompleted={this.state.tasks.dateCompleted} id={this.state.tasks.id}>
+        <ToDoTasks text={this.props.text} done={this.props.done} dateAdded={this.props.dateAdded} dateCompleted={this.props.dateCompleted} id={this.props.id}>
+          {/* <TaskItem text={this.props.text} done={this.props.done} dateAdded={this.props.dateAdded} dateCompleted={this.props.dateCompleted} id={this.props.id}/> */}
+          {dateSortedIncomplete.map(task => {
+          return <TaskItem doneTaskFunc={this.doneTask} text={task.text} done={task.done} key={task.id}/>
+        })}
+        </ToDoTasks>
+        <CompletedTasks text={this.props.text} done={this.props.done} dateAdded={this.props.dateAdded} dateCompleted={this.props.dateCompleted} id={this.props.id}>
+          <TaskItem text={this.props.text} done={this.props.done} dateAdded={this.props.dateAdded} dateCompleted={this.props.dateCompleted} id={this.props.id}/>
+        </CompletedTasks>
+      </TasksArea>
       <Footer />
 
     </div>
