@@ -5,17 +5,19 @@ import CompletedTasks from "./CompletedTasks";
 
 class TasksArea extends React.Component {
     render() {
+
         return (
             <div className="row mx-auto appRow">
+               
                 <div className="col-lg-2">
 
                 </div>
                 <div id="to-do-tasks" className=" col-12 col-lg-4">
-                    <ToDoTasks />
+                    <ToDoTasks areaText={this.props.taskText} areaAdded={this.props.taskAddedDate} areaDone={this.props.taskDone} areaDoneDate={this.props.taskDoneDate} areaId={this.props.taskId}/>
                 </div>
 
                 <div id="done-tasks" className=" col-12 col-lg-4">
-                    <CompletedTasks />
+                    <CompletedTasks areaText={this.props.taskText} areaAdded={this.props.taskAddedDate} areaDone={this.props.taskDone} areaDoneDate={this.props.taskDoneDate}/>
                 </div>
                 <div className="col-lg-2">
 
