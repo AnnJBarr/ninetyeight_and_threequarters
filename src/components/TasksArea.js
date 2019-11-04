@@ -5,19 +5,25 @@ import CompletedTasks from "./CompletedTasks";
 
 class TasksArea extends React.Component {
     render() {
+        const completedTasks = this.props.tasks.filter(t => {
+            return t.done === true;
+        });
 
+        const incompleteTasks = this.props.tasks.filter(t => {
+            return t.done === false;
+        });
         return (
             <div className="row mx-auto appRow">
-               
+
                 <div className="col-lg-2">
 
                 </div>
                 <div id="to-do-tasks" className=" col-12 col-lg-4">
-                    <ToDoTasks areaText={this.props.taskText} areaAdded={this.props.taskAddedDate} areaDone={this.props.taskDone} areaDoneDate={this.props.taskDoneDate} areaId={this.props.taskId}/>
+                    <ToDoTasks tasks={incompleteTasks} />
                 </div>
 
                 <div id="done-tasks" className=" col-12 col-lg-4">
-                    <CompletedTasks areaText={this.props.taskText} areaAdded={this.props.taskAddedDate} areaDone={this.props.taskDone} areaDoneDate={this.props.taskDoneDate}/>
+                    <CompletedTasks tasks={completedTasks} />
                 </div>
                 <div className="col-lg-2">
 

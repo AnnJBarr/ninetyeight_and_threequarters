@@ -5,15 +5,8 @@ import { faChevronCircleDown, faClipboardCheck } from '@fortawesome/free-solid-s
 
 class CompletedTasks extends React.Component {
     render() {
-        const tasksConsole = this.props.tasks;
-        console.log(tasksConsole);
-        // const completedTasks=this.state.tasks.filter(task => {
-        //     return task.completed;
-        //   });
-      
-        //   const dateSortedCompleted = completedTasks.sort((a, b) => b.date - a.date);
-        //   console.log(dateSortedCompleted);
-        //   // Completed listed most recent first
+        const tasks = this.props.tasks;
+        const dateSortedCompleted = tasks.sort((a, b) => b.dateCompleted - a.dateCompleted);
 
         return (
             <div id="done" className="card">
@@ -22,12 +15,9 @@ class CompletedTasks extends React.Component {
                 </div>
                 <div className="card-body">
                     <div className="card-text">
-                        {/* {dateSortedCompleted.map(task => {
-                            return <TaskItem text={task.text} completed={task.completed} key={task.id} />
-                        })} */}
-                        <TaskItem text="This is the first completed item" done={true} />
-                        <TaskItem text="This is the second item on the completed list, which is long so I need the text to wrap" done={true} />
-                        <TaskItem text="Third item on the complete list" done={true} />
+                        {dateSortedCompleted.map(task => {
+                            return <TaskItem text={task.text} done={task.done} key={task.id} />
+                        })}
                     </div>
                     <button id="task-button" className="btn"><FontAwesomeIcon icon={faChevronCircleDown} /></button>
                 </div>

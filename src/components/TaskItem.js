@@ -4,7 +4,7 @@ import { faDotCircle, faClipboardCheck, faTrashAlt } from '@fortawesome/free-sol
 
 class TaskItem extends React.Component {
     render() {
-        
+
         return (
             <div className="row taskRow">
                 <div className="col-1">
@@ -12,14 +12,10 @@ class TaskItem extends React.Component {
                 </div>
 
                 <div className="col-8">
-                    {/* <div className={this.props.done ? <div id="doneid">{this.props.text}</div> : <div>{this.props.text}</div>}>
-                    {this.props.text}
-                  </div> */}
                     {this.props.done === true ? <div id="doneid">{this.props.text}</div> : <div>{this.props.text}</div>}
-
                 </div>
                 <div className="col-1 text-right">
-                    {this.props.done === true ? <div id="doneid"></div> : <button id="icon-buttons" className="btn" ><FontAwesomeIcon icon={faClipboardCheck} /></button>}
+                    {this.props.done === true ? <div id="doneid"></div> : <button id="icon-buttons" className="btn" onClick={this.handleDoneClick} ><FontAwesomeIcon icon={faClipboardCheck} /></button>}
                 </div>
                 <div className="col-1">
                     <button id="icon-buttons" className="btn" ><FontAwesomeIcon icon={faTrashAlt} /></button>
