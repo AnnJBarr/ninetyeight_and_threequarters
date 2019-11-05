@@ -8,7 +8,9 @@
     "@fortawesome/react-fontawesome": "^0.1.7",
     "moment": "^2.24.0",
     "react": "^16.10.2",
+    "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.10.2",
+    "react-infinite-calendar": "^2.3.1",
     "react-scripts": "3.2.0"
   },
   "scripts": {

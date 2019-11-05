@@ -1,6 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faNotesMedical } from '@fortawesome/free-solid-svg-icons';
+import InfiniteCalendar from 'react-infinite-calendar';
+import 'react-infinite-calendar/styles.css'
 
 class AddTask extends React.Component {
 
@@ -49,11 +51,45 @@ class AddTask extends React.Component {
                                         onChange={this.updateNewItemText}></textarea>
                                 </div>
                             </div>
+                            Due by (please select)
+                            <InfiniteCalendar
+                                theme={{
+                                    selectionColor: 'rgb(128, 0, 128)',
+                                    textColor: {
+                                        default: '#333',
+                                        active: '#FFF'
+                                    },
+                                    weekdayColor: 'rgb(146, 118, 255)',
+                                    headerColor: 'rgb(128, 0, 128)',
+                                    floatingNav: {
+                                        background: 'rgba(128, 0, 128, 0.96)',
+                                        color: '#FFF',
+                                        chevron: '#FFA726'
+                                    }
+                                }}
+                                displayOptions={{
+                                    layout: 'portrait',
+                                    showHeader: true,
+                                    shouldHeaderAnimate: false,
+                                    showWeekdays: false
+                                }}
+                                width={(window.innerWidth <= 300) ? window.innerWidth : 300}
+                                height={window.innerHeight - 730}
+                                rowHeight={32}
+                                minDate={new Date()}
+                                onSelect={this.handleInfiniteDateChange}
+                            //const dateSelected=this.state.date;
+                            //console.log('after setting to this.date ' + dateSelected)
+
+                            //{this.handleDateChange}
+                            />
                             <button className="btn btn-outline-light" onClick={this.handleClick} disabled={this.state.newItemText.length === 0 || this.state.newItemText.length > 160}>Add task</button>
                         </div>
                     </div>
                 </div>
             </div>
+
+
         );
     }
 }
