@@ -15,12 +15,12 @@ class App extends Component {
 
   state = {
     tasks: [
-      { text: "Second item added, first item to be completed", done: true, dateAdded: "2019-10-15", dateCompleted: new Date("2019-10-18"), id: uuid() },
-      { text: "Fifth item added, not yet complete", done: false, dateAdded: "2019-10-23", dateCompleted: null, id: uuid() },
-      { text: "Third item added, not completed", done: false, dateAdded: "2019-10-16", dateCompleted: null, id: uuid() },
-      { text: "Fourth item added, second item completed", done: true, dateAdded: "2019-10-21", dateCompleted: new Date("2019-10-25"), id: uuid() },
-      { text: "First item added, third item completed", done: true, dateAdded: "2019-09-28", dateCompleted: new Date("2019-10-28"), id: uuid() },
-      { text: "Sixth item added, still to be completed", done: false, dateAdded: "2019-10-29", dateCompleted: null, id: uuid() },
+      { text: "Second item added, first item to be completed", done: true, dateAdded: "2019-10-15", dateCompleted: "2019-10-18", dueBy: "2019-11-10", id: uuid() },
+      { text: "Fifth item added, not yet complete", done: false, dateAdded: "2019-10-23", dateCompleted: null, dueBy: "2019-11-15", id: uuid() },
+      { text: "Third item added, not completed", done: false, dateAdded: "2019-10-16", dateCompleted: null, dueBy: "2019-12-10", id: uuid() },
+      { text: "Fourth item added, second item completed", done: true, dateAdded: "2019-10-21", dateCompleted: "2019-10-25", dueBy: "2019-09-10", id: uuid() },
+      { text: "First item added, third item completed", done: true, dateAdded: "2019-09-28", dateCompleted: "2019-10-28", dueBy: "2019-12-31", id: uuid() },
+      { text: "Sixth item added, still to be completed", done: false, dateAdded: "2019-10-29", dateCompleted: null, dueBy: "2019-10-30", id: uuid() },
 
     ]
   }
@@ -28,7 +28,7 @@ class App extends Component {
   addNewTask = (taskText) => {
     const tasksCopy = this.state.tasks.slice();
     const newTask = {
-      text: taskText, 
+      text: taskText,
       done: false,
       dateAdded: moment().format("YYYY-MM-DD"),
       dateCompleted: new Date(),
@@ -58,11 +58,22 @@ class App extends Component {
   }
 
 
+  convertDates = (tasks) => {
+    console.log('convertDates called')
+    return tasks.map(task => {
+      task.dateAdded = new Date(task.dateAdded);
+      task.dueBy = new Date(task.dueBy);
+      task.dateCompleted = new Date(task.dateCompleted);
+      return task
+    })
+  }
 
   render() {
     const completedTasks = this.state.tasks.filter(task => {
       return task.done;
     });
+
+
 
     const dateSortedCompleted = completedTasks.sort((a, b) => b.dateCompleted - a.dateCompleted);
     //Completed listed most recent first
@@ -71,18 +82,18 @@ class App extends Component {
       return task.done ? false : true
     });
 
+    const incompleteWithDateObj = this.convertDates(incompleteTasks);
 
-    const dateSortedIncomplete = incompleteTasks.sort((a, b) => a.dateAdded - b.dateAdded);
+    const dateSortedIncomplete = incompleteWithDateObj.sort((a, b) => a.dateAdded - b.dateAdded);
     //most recent to bottom of list
 
     const count = incompleteTasks.filter(item => item.done === false).length
-    console.log("Count" + count)
 
 
     return (
       <div className="container">
         <Header />
-        <AddTask addNewTaskFunc={this.addNewTask}/>
+        <AddTask addNewTaskFunc={this.addNewTask} />
         <RemainingTasks count={count} />
 
         <div className="row mx-auto appRow">
