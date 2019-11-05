@@ -22,3 +22,7 @@ body {
 #tododot {
     color: rgb(211, 9, 9);
 }
+
+.overdue {
+  color: red;
+}
