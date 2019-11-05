@@ -2,12 +2,31 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faNotesMedical } from '@fortawesome/free-solid-svg-icons';
 import InfiniteCalendar from 'react-infinite-calendar';
-import 'react-infinite-calendar/styles.css'
+import 'react-infinite-calendar/styles.css';
+import moment from "moment";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+
 
 class AddTask extends React.Component {
 
-    state = {
-        newItemText: ""
+    // state = {
+    //     newItemText: "",
+    //     selectedDate: "2019-01-01"
+    // }
+
+    constructor(props, context) {
+        super(props, context);
+
+        // Initial state with date
+        this.state = {
+            // or Date or Moment.js
+            newItemText: "",
+            selectedDate: moment().format("YYYY-MM-DD")
+        };
+
+        // This binding is necessary to make `this` work in the callback
+        this.onChange = this.onChange.bind(this);
     }
 
     //Functions which update state must always live where the state lives
@@ -26,6 +45,35 @@ class AddTask extends React.Component {
         this.props.addNewTaskFunc(this.state.newItemText);
         this.setState({
             newItemText: ""
+        });
+    }
+
+    onChange(date) {
+        console.log('this happens when onChange is called' + date)
+        const formattedDate = moment(date).format("YYYY-MM-DD")
+        console.log(formattedDate)
+        this.setState({
+            selectedDate: moment(date).format("YYYY-MM-DD")
+
+        });
+
+    }
+
+    handleInfiniteDateChange = e => {
+        console.log(e)
+        console.log(moment(e).format("YYYY-MM-DD"))
+        console.log('this is what happens when I selected date Infinite date ' + e)
+        this.setState({
+            selectedDate: moment(e).format("YYYY-MM-DD")
+        });
+    }
+
+
+
+    onSelect = (date) => {
+        console.log('this is the output of onSelect ' + date)
+        this.setState({
+            dateSelected: this.props.onSelect
         });
     }
 
@@ -61,7 +109,7 @@ class AddTask extends React.Component {
                                         Due by (please select)
                                     </div>
                                     <div className="col-6">
-                                        <InfiniteCalendar
+                                        <InfiniteCalendar className="form-control"
                                             theme={{
                                                 selectionColor: 'rgb(128, 0, 128)',
                                                 textColor: {
@@ -89,15 +137,19 @@ class AddTask extends React.Component {
                                             onSelect={this.handleInfiniteDateChange}
                                         />
                                     </div>
-                                    <div className="col-12">
-                                        <button className="btn btn-outline-light" onClick={this.handleClick} disabled={this.state.newItemText.length === 0 || this.state.newItemText.length > 160}>Add task</button>
+                                    <div className="col-3">
+                                        <DatePicker onChange={this.handleDateChange} value={this.state.selectedDate} />
                                     </div>
+                                </div>
+                                <div className="col-12">
+                                    <button className="btn btn-outline-light" onClick={this.handleClick} disabled={this.state.newItemText.length === 0 || this.state.newItemText.length > 160}>Add task</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
 
 
         );
