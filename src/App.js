@@ -32,7 +32,7 @@ class App extends Component {
       done: false,
       dateAdded: moment().format("YYYY-MM-DD"),
       dateCompleted: new Date(),
-      dueBy: null,
+      dueBy: new Date(),
       id: uuid()
     };
 
@@ -99,57 +99,7 @@ class App extends Component {
         <Header />
         <AddTask addNewTaskFunc={this.addNewTask} />
         <RemainingTasks count={count} />
-
-        <div className="row mx-auto appRow">
-
-          <div className="col-lg-2">
-
-          </div>
-          <div id="to-do-tasks" className=" col-12 col-lg-4">
-            <div id="todo" className="card">
-              <div className="card-header">
-                <h5 className="card-title">Tasks to do <FontAwesomeIcon icon={faClipboardList} /></h5>
-              </div>
-              <div className="card-body">
-                <div className="card-text" >
-                  {dateSortedIncomplete.map(task => {
-                    return <TaskItem doneTaskFunc={this.doneTask} text={task.text} done={task.done} key={task.id} dateAdded={this.dateAdded} dateCompleted={this.dateCompleted} dueBy={this.dueBy}/>
-                  })}
-                </div>
-                <button id="task-button" className="btn"><FontAwesomeIcon icon={faChevronCircleDown} /></button>
-              </div>
-            </div>
-
-          </div>
-
-          <div id="done-tasks" className=" col-12 col-lg-4">
-            <div id="done" className="card">
-              <div className="card-header">
-                <h5 className="card-title">Completed <FontAwesomeIcon icon={faClipboardCheck} /></h5>
-              </div>
-              <div className="card-body">
-                <div className="card-text">
-                  {dateSortedCompleted.map(task => {
-                    return <TaskItem text={task.text} done={task.done} key={task.id} />
-                  })}
-                </div>
-                <button id="task-button" className="btn"><FontAwesomeIcon icon={faChevronCircleDown} /></button>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-2">
-
-          </div>
-        </div>
-
-
-
-
-
-
         <TasksArea tasks={this.state.tasks} doneTaskFunc={this.doneTask} />
-
-
         <Footer />
 
       </div>

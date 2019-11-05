@@ -33,17 +33,9 @@ class TaskItem extends React.Component {
                 <div className="col-6">
                     {this.props.done === true ? <div id="doneid">{this.props.text}</div> : <div>{this.props.text}</div>}
                 </div>
-                <div className="col-2">
-                    <p>
-                    {/* {this.props.date} */}
-                    {moment(this.props.dateAdded).format("YYYY-MM-DD")}
-                   </p>
-                </div>
-                <div className="col-2">
+                <div className="col-3">
                     <p className={moment(this.props.dueBy, "YYYY-MM-DD").fromNow().includes("ago") ? "overdue" : ""}>
-                        Due {moment(this.props.dueBy, "YYYY-MM-DD").fromNow()}
-                        {/* {this.props.dueBy} */}
-                        {/* {moment(this.props.dueBy).format("YYYY-MM-DD")}  */}
+                        <h6>Due {moment(this.props.dueBy, "YYYY-MM-DD").fromNow()}</h6>
                     </p>
                 </div>
                 <div className="col-1 text-right">
