@@ -38,52 +38,62 @@ class AddTask extends React.Component {
                         <div className="card-body">
                             <h5 className="card-title">Add new task to do <FontAwesomeIcon icon={faNotesMedical} /></h5>
                             <div className="card-text">
-                                <div className="input-group">
-                                    <div className="input-group-prepend">
-                                        <span className="input-group-text">Enter your next task</span>
+                                <div className="row">
+                                    <div className="col-12">
+                                        <div className="input-group">
+                                            <div className="input-group-prepend">
+                                                <span className="input-group-text">Enter your next task</span>
+                                            </div>
+                                            <textarea className="form-control"
+                                                aria-label="With textarea"
+                                                type="text"
+                                                id="newItem"
+                                                placeholder="Type an item here (max 160 characters)"
+                                                value={this.state.newItemText}
+                                                onChange={this.updateNewItemText}></textarea>
+                                        </div>
                                     </div>
-                                    <textarea className="form-control"
-                                        aria-label="With textarea"
-                                        type="text"
-                                        id="newItem"
-                                        placeholder="Type an item here (max 160 characters)"
-                                        value={this.state.newItemText}
-                                        onChange={this.updateNewItemText}></textarea>
+                                </div>
+                                <div className="row">
+                                    <div className="col-4">
+                                        <br />
+                                        <br />
+                                        Due by (please select)
+                                    </div>
+                                    <div className="col-6">
+                                        <InfiniteCalendar
+                                            theme={{
+                                                selectionColor: 'rgb(128, 0, 128)',
+                                                textColor: {
+                                                    default: '#333',
+                                                    active: '#FFF'
+                                                },
+                                                weekdayColor: 'rgb(146, 118, 255)',
+                                                headerColor: 'rgb(128, 0, 128)',
+                                                floatingNav: {
+                                                    background: 'rgba(128, 0, 128, 0.96)',
+                                                    color: '#FFF',
+                                                    chevron: '#FFA726'
+                                                }
+                                            }}
+                                            displayOptions={{
+                                                layout: 'portrait',
+                                                showHeader: true,
+                                                shouldHeaderAnimate: false,
+                                                showWeekdays: false
+                                            }}
+                                            width={(window.innerWidth <= 300) ? window.innerWidth : 300}
+                                            height={window.innerHeight - 730}
+                                            rowHeight={32}
+                                            minDate={new Date()}
+                                            onSelect={this.handleInfiniteDateChange}
+                                        />
+                                    </div>
+                                    <div className="col-12">
+                                        <button className="btn btn-outline-light" onClick={this.handleClick} disabled={this.state.newItemText.length === 0 || this.state.newItemText.length > 160}>Add task</button>
+                                    </div>
                                 </div>
                             </div>
-                            Due by (please select)
-                            <InfiniteCalendar
-                                theme={{
-                                    selectionColor: 'rgb(128, 0, 128)',
-                                    textColor: {
-                                        default: '#333',
-                                        active: '#FFF'
-                                    },
-                                    weekdayColor: 'rgb(146, 118, 255)',
-                                    headerColor: 'rgb(128, 0, 128)',
-                                    floatingNav: {
-                                        background: 'rgba(128, 0, 128, 0.96)',
-                                        color: '#FFF',
-                                        chevron: '#FFA726'
-                                    }
-                                }}
-                                displayOptions={{
-                                    layout: 'portrait',
-                                    showHeader: true,
-                                    shouldHeaderAnimate: false,
-                                    showWeekdays: false
-                                }}
-                                width={(window.innerWidth <= 300) ? window.innerWidth : 300}
-                                height={window.innerHeight - 730}
-                                rowHeight={32}
-                                minDate={new Date()}
-                                onSelect={this.handleInfiniteDateChange}
-                            //const dateSelected=this.state.date;
-                            //console.log('after setting to this.date ' + dateSelected)
-
-                            //{this.handleDateChange}
-                            />
-                            <button className="btn btn-outline-light" onClick={this.handleClick} disabled={this.state.newItemText.length === 0 || this.state.newItemText.length > 160}>Add task</button>
                         </div>
                     </div>
                 </div>
