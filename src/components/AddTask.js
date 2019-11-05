@@ -10,11 +10,6 @@ import "react-datepicker/dist/react-datepicker.css";
 
 class AddTask extends React.Component {
 
-    // state = {
-    //     newItemText: "",
-    //     selectedDate: "2019-01-01"
-    // }
-
     constructor(props, context) {
         super(props, context);
 
@@ -28,13 +23,12 @@ class AddTask extends React.Component {
         // This binding is necessary to make `this` work in the callback
         this.onChange = this.onChange.bind(this);
     }
-
     //Functions which update state must always live where the state lives
     updateNewItemText = (event) => {
-        //console.log(event.target.value)
+        console.log(event.target.value)
         // this function should update the state whenever someone types
         this.setState({
-            newItemText: event.target.value
+            newItemText: event.target.value,
         })
     }
 
@@ -42,11 +36,12 @@ class AddTask extends React.Component {
 
     handleClick = (event) => {
         event.preventDefault();
-        this.props.addNewTaskFunc(this.state.newItemText);
+        this.props.addNewTaskFunc(this.state.newItemText, this.state.selectedDate);
         this.setState({
             newItemText: ""
         });
     }
+
 
     onChange(date) {
         console.log('this happens when onChange is called' + date)
@@ -58,17 +53,23 @@ class AddTask extends React.Component {
         });
 
     }
-
-    handleInfiniteDateChange = e => {
+    handleDateChange = e => {
         console.log(e)
         console.log(moment(e).format("YYYY-MM-DD"))
-        console.log('this is what happens when I selected date Infinite date ' + e)
+        console.log('this is what happens when I selected date ' + e)
         this.setState({
             selectedDate: moment(e).format("YYYY-MM-DD")
         });
     }
 
-
+    handleInfiniteDateChange = e => {
+        console.log(e)
+        console.log(moment(e).format("YYYY-MM-DD"))
+        console.log('this is what happens when I selected date Infinite date' + e)
+        this.setState({
+            selectedDate: moment(e).format("YYYY-MM-DD")
+        });
+    }
 
     onSelect = (date) => {
         console.log('this is the output of onSelect ' + date)
@@ -136,9 +137,6 @@ class AddTask extends React.Component {
                                             minDate={new Date()}
                                             onSelect={this.handleInfiniteDateChange}
                                         />
-                                    </div>
-                                    <div className="col-3">
-                                        <DatePicker onChange={this.handleDateChange} value={this.state.selectedDate} />
                                     </div>
                                 </div>
                                 <div className="col-12">
