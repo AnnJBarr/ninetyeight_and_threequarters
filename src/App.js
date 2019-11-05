@@ -32,6 +32,7 @@ class App extends Component {
       done: false,
       dateAdded: moment().format("YYYY-MM-DD"),
       dateCompleted: new Date(),
+      dueBy: null,
       id: uuid()
     };
 
@@ -73,9 +74,9 @@ class App extends Component {
       return task.done;
     });
 
+    const completedWithDateObj = this.convertDates(completedTasks); 
 
-
-    const dateSortedCompleted = completedTasks.sort((a, b) => b.dateCompleted - a.dateCompleted);
+    const dateSortedCompleted = completedWithDateObj.sort((a, b) => b.dateCompleted - a.dateCompleted);
     //Completed listed most recent first
 
     const incompleteTasks = this.state.tasks.filter(task => {
