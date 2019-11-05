@@ -1,6 +1,4 @@
 import React, { Component } from "react"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronCircleDown, faClipboardList, faClipboardCheck } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 import moment from "moment";
 import uuid from "uuid/v4";
@@ -9,7 +7,6 @@ import AddTask from './components/AddTask';
 import RemainingTasks from './components/RemainingTasks';
 import TasksArea from './components/TasksArea';
 import Footer from './components/Footer';
-import TaskItem from "./components/TaskItem";
 
 class App extends Component {
 
@@ -72,25 +69,14 @@ class App extends Component {
   }
 
   render() {
-    const completedTasks = this.state.tasks.filter(task => {
-      return task.done;
-    });
-
-    const completedWithDateObj = this.convertDates(completedTasks); 
-
-    const dateSortedCompleted = completedWithDateObj.sort((a, b) => b.dateCompleted - a.dateCompleted);
-    //Completed listed most recent first
-
+    
     const incompleteTasks = this.state.tasks.filter(task => {
       return task.done ? false : true
     });
 
     const incompleteWithDateObj = this.convertDates(incompleteTasks);
 
-    const dateSortedIncomplete = incompleteWithDateObj.sort((a, b) => a.dateAdded - b.dateAdded);
-    //most recent to bottom of list
-
-    const count = incompleteTasks.filter(item => item.done === false).length
+    const count = incompleteWithDateObj.filter(item => item.done === false).length
 
     
 

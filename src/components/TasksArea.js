@@ -15,19 +15,19 @@ class TasksArea extends React.Component {
         return (
             <div className="row mx-auto appRow">
 
-                <div className="col-lg-1">
+                {/* <div className="col-lg-1">
 
-                </div>
-                <div id="to-do-tasks" className=" col-12 col-lg-5">
+                </div> */}
+                <div id="to-do-tasks" className=" col-12 col-lg-6">
                     <ToDoTasks tasks={incompleteTasks} />
                 </div>
 
-                <div id="done-tasks" className=" col-12 col-lg-5">
+                <div id="done-tasks" className=" col-12 col-lg-6">
                     <CompletedTasks tasks={completedTasks} />
                 </div>
-                <div className="col-lg-1">
+                {/* <div className="col-lg-1">
 
-                </div>
+                </div> */}
             </div>
 
         );
