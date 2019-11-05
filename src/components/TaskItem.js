@@ -34,9 +34,11 @@ class TaskItem extends React.Component {
                     {this.props.done === true ? <div id="doneid"><h6>{this.props.text}</h6></div> : <div><h6>{this.props.text}</h6></div>}
                 </div>
                 <div className="col-3">
-                    <h6 className={moment(this.props.dueBy, "YYYY-MM-DD").fromNow().includes("ago") ? "overdue" : ""}>
-                        Due {moment(this.props.dueBy, "YYYY-MM-DD").fromNow()}
-                    </h6>
+                    {this.props.done === true ? <div id="doneid"><h6>
+                        Done {moment(this.props.dateCompleted, "YYYY-MM-DD").fromNow()}
+                    </h6></div> : <h6 className={moment(this.props.dueBy, "YYYY-MM-DD").fromNow().includes("ago") ? "overdue" : ""}>
+                            Due {moment(this.props.dueBy, "YYYY-MM-DD").fromNow()}
+                        </h6>}
                 </div>
                 <div className="col-1">
                     {this.props.done === true ? <div id="doneid"></div> : <button id="icon-buttons" className="btn" onClick={this.handleDoneClick} ><FontAwesomeIcon icon={faClipboardCheck} /></button>}
