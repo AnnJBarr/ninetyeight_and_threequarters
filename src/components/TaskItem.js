@@ -21,7 +21,10 @@ class TaskItem extends React.Component {
 
     }
 
-    
+    handleDelete =(e) =>{
+        console.log("the button was clicked" + e)
+        this.props.deleteTaskFunc(this.props.id);
+       }
 
 
     render() {
@@ -46,7 +49,7 @@ class TaskItem extends React.Component {
                     {this.props.done === true ? <div id="doneid"></div> : <button id="icon-buttons" className="btn" onClick={this.handleDoneClick} disabled={this.props.done}><FontAwesomeIcon icon={faClipboardCheck} /></button>}
                 </div>
                 <div className="col-1">
-                    <button id="icon-buttons" className="btn" ><FontAwesomeIcon icon={faTrashAlt} /></button>
+                    <button id="icon-buttons" className="btn" onClick={this.handleDelete} ><FontAwesomeIcon icon={faTrashAlt} /></button>
                 </div>
 
 

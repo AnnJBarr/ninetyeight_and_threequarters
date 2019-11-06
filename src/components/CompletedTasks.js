@@ -17,7 +17,7 @@ class CompletedTasks extends React.Component {
                     <div className="card-text">
                     {/* { text: "Second item added, first item to be completed", done: true, dateAdded: "2019-10-15", dateCompleted: "2019-10-18", dueBy: "2019-11-10", id: uuid(), date: "2019-05-03" }                       */}
                         {dateSortedCompleted.map(task => {
-                            return <TaskItem doneTaskFunc={this.props.doneTask} deleteTaskFunc={this.props.deleteTask} text={task.text} done={task.done} key={task.id} id={task.id} dateAdded={task.dateAdded} dateCompleted={task.dateCompleted} dueBy={task.dueBy} />
+                            return <TaskItem deleteTaskFunc={this.props.deleteTaskFunc} text={task.text} done={task.done} key={task.id} id={task.id} dateAdded={task.dateAdded} dateCompleted={task.dateCompleted} dueBy={task.dueBy} />
                         })}
                     </div>
                     <button id="task-button" className="btn"><FontAwesomeIcon icon={faChevronCircleDown} /></button>
