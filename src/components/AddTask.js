@@ -81,12 +81,12 @@ class AddTask extends React.Component {
                                     </div>
                                 </div>
                                 <div className="row">
-                                    <div className="col-4">
+                                    <div className="col-4 col-lg-12">
                                         <br />
                                         <br />
                                         Due by (please select)
                                     </div>
-                                    <div className="col-5">
+                                    <div className="col-5 col-lg-12">
                                         <InfiniteCalendar className="form-control"
                                             theme={{
                                                 selectionColor: 'rgb(128, 0, 128)',
