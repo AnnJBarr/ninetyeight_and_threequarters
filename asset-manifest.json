@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ninetyeight_and_threequarters/static/css/main.b81ebfab.chunk.css",
+    "main.css": "/ninetyeight_and_threequarters/static/css/main.86eca809.chunk.css",
     "main.js": "/ninetyeight_and_threequarters/static/js/main.a676356a.chunk.js",
     "main.js.map": "/ninetyeight_and_threequarters/static/js/main.a676356a.chunk.js.map",
     "runtime-main.js": "/ninetyeight_and_threequarters/static/js/runtime-main.fa508235.js",
@@ -9,16 +9,16 @@
     "static/js/2.1fa466df.chunk.js": "/ninetyeight_and_threequarters/static/js/2.1fa466df.chunk.js",
     "static/js/2.1fa466df.chunk.js.map": "/ninetyeight_and_threequarters/static/js/2.1fa466df.chunk.js.map",
     "index.html": "/ninetyeight_and_threequarters/index.html",
-    "precache-manifest.a6718fb7fdd4caae7a293ee96fb8b0d5.js": "/ninetyeight_and_threequarters/precache-manifest.a6718fb7fdd4caae7a293ee96fb8b0d5.js",
+    "precache-manifest.e8fc44a4c823206a5e0061082aa564e4.js": "/ninetyeight_and_threequarters/precache-manifest.e8fc44a4c823206a5e0061082aa564e4.js",
     "service-worker.js": "/ninetyeight_and_threequarters/service-worker.js",
     "static/css/2.78f95891.chunk.css.map": "/ninetyeight_and_threequarters/static/css/2.78f95891.chunk.css.map",
-    "static/css/main.b81ebfab.chunk.css.map": "/ninetyeight_and_threequarters/static/css/main.b81ebfab.chunk.css.map"
+    "static/css/main.86eca809.chunk.css.map": "/ninetyeight_and_threequarters/static/css/main.86eca809.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.fa508235.js",
     "static/css/2.78f95891.chunk.css",
     "static/js/2.1fa466df.chunk.js",
-    "static/css/main.b81ebfab.chunk.css",
+    "static/css/main.86eca809.chunk.css",
     "static/js/main.a676356a.chunk.js"
   ]
 }
