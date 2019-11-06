@@ -4,8 +4,6 @@ import { faNotesMedical } from '@fortawesome/free-solid-svg-icons';
 import InfiniteCalendar from 'react-infinite-calendar';
 import 'react-infinite-calendar/styles.css';
 import moment from "moment";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 
 
 class AddTask extends React.Component {
@@ -13,26 +11,19 @@ class AddTask extends React.Component {
     constructor(props, context) {
         super(props, context);
 
-        // Initial state with date
         this.state = {
-            // or Date or Moment.js
             newItemText: "",
             selectedDate: moment().format("YYYY-MM-DD")
         };
 
-        // This binding is necessary to make `this` work in the callback
         this.onChange = this.onChange.bind(this);
     }
-    //Functions which update state must always live where the state lives
+
     updateNewItemText = (event) => {
-        console.log(event.target.value)
-        // this function should update the state whenever someone types
         this.setState({
             newItemText: event.target.value,
         })
     }
-
-    //Intermediary function
 
     handleClick = (event) => {
         event.preventDefault();
@@ -42,11 +33,7 @@ class AddTask extends React.Component {
         });
     }
 
-
     onChange(date) {
-        console.log('this happens when onChange is called' + date)
-        const formattedDate = moment(date).format("YYYY-MM-DD")
-        console.log(formattedDate)
         this.setState({
             selectedDate: moment(date).format("YYYY-MM-DD")
 
@@ -63,18 +50,8 @@ class AddTask extends React.Component {
     }
 
     handleInfiniteDateChange = e => {
-        console.log(e)
-        console.log(moment(e).format("YYYY-MM-DD"))
-        console.log('this is what happens when I selected date Infinite date' + e)
         this.setState({
             selectedDate: moment(e).format("YYYY-MM-DD")
-        });
-    }
-
-    onSelect = (date) => {
-        console.log('this is the output of onSelect ' + date)
-        this.setState({
-            dateSelected: this.props.onSelect
         });
     }
 
@@ -82,7 +59,7 @@ class AddTask extends React.Component {
     render() {
         return (
             <div id="add-task" className="row appRow">
-                <div className="mx-auto col-12 col-lg-8">
+                <div className="mx-auto col-12 col-lg-9">
                     <div className="card bg-transparent text-white">
                         <div className="card-body">
                             <h5 className="card-title">Add new task to do <FontAwesomeIcon icon={faNotesMedical} /></h5>
@@ -109,7 +86,7 @@ class AddTask extends React.Component {
                                         <br />
                                         Due by (please select)
                                     </div>
-                                    <div className="col-6">
+                                    <div className="col-5">
                                         <InfiniteCalendar className="form-control"
                                             theme={{
                                                 selectionColor: 'rgb(128, 0, 128)',
@@ -131,7 +108,7 @@ class AddTask extends React.Component {
                                                 shouldHeaderAnimate: false,
                                                 showWeekdays: false
                                             }}
-                                            width={(window.innerWidth <= 300) ? window.innerWidth : 300}
+                                            width={(window.innerWidth <= 305) ? window.innerWidth : 305}
                                             height={window.innerHeight - 730}
                                             rowHeight={32}
                                             minDate={new Date()}

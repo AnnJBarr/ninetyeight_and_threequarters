@@ -14,17 +14,13 @@ class TaskItem extends React.Component {
         });
     }
 
-    handleDoneClick = event => {
-        console.log("the done button was clicked ")
-        console.log(event)
+    handleDoneClick = () => {
         this.props.doneTaskFunc(this.props.id)
-
     }
 
-    handleDelete =(e) =>{
-        console.log("the button was clicked" + e)
+    handleDelete = () => {
         this.props.deleteTaskFunc(this.props.id);
-       }
+    }
 
 
     render() {

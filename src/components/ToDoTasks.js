@@ -1,7 +1,7 @@
 import React from "react";
 import TaskItem from './TaskItem';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronCircleDown, faClipboardList } from '@fortawesome/free-solid-svg-icons';
+import { faClipboardList } from '@fortawesome/free-solid-svg-icons';
 
 class ToDoTasks extends React.Component {
     render() {
@@ -19,13 +19,8 @@ class ToDoTasks extends React.Component {
                             return <TaskItem doneTaskFunc={this.props.doneTaskFunc} deleteTaskFunc={this.props.deleteTaskFunc} text={task.text} done={task.done} key={task.id} id={task.id} dateAdded={task.dateAdded} dateCompleted={task.dateCompleted} dueBy={task.dueBy} />
                         })}
                     </div>
-                    <button id="task-button" className="btn"><FontAwesomeIcon icon={faChevronCircleDown} /></button>
                 </div>
             </div>
-
-
-            
-
         );
     }
 }
