@@ -103,13 +103,13 @@ class AddTask extends React.Component {
                                                 }
                                             }}
                                             displayOptions={{
-                                                layout: 'portait',
+                                                layout: 'portrait',
                                                 showHeader: true,
                                                 shouldHeaderAnimate: false,
                                                 showWeekdays: false
                                             }}
-                                            width={(window.innerWidth <= 305) ? window.innerWidth : 305}
-                                            height={window.innerHeight - 450}
+                                            width={297}
+                                            height= {67}
                                             rowHeight={32}
                                             minDate={new Date()}
                                             onSelect={this.handleInfiniteDateChange}
