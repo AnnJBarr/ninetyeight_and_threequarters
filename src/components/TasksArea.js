@@ -19,11 +19,11 @@ class TasksArea extends React.Component {
 
                 </div> */}
                 <div id="to-do-tasks" className=" col-12 col-lg-6">
-                    <ToDoTasks tasks={incompleteTasks} />
+                    <ToDoTasks tasks={incompleteTasks} deleteTaskFunc={this.props.deleteTaskFunc} doneTaskFunc={this.props.doneTaskFunc}/>
                 </div>
 
                 <div id="done-tasks" className=" col-12 col-lg-6">
-                    <CompletedTasks tasks={completedTasks} />
+                    <CompletedTasks tasks={completedTasks} deleteTaskFunc={this.props.deleteTaskFunc}/>
                 </div>
                 {/* <div className="col-lg-1">
 

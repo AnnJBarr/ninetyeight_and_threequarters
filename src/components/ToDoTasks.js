@@ -16,7 +16,7 @@ class ToDoTasks extends React.Component {
                 <div className="card-body">
                     <div className="card-text" >
                         {dateSortedIncomplete.map(task => {
-                            return <TaskItem doneTaskFunc={this.doneTask} text={task.text} done={task.done} key={task.id} dateAdded={task.dateAdded} dateCompleted={task.dateCompleted} dueBy={task.dueBy} />
+                            return <TaskItem doneTaskFunc={this.props.doneTaskFunc} deleteTaskFunc={this.props.deleteTaskFunc} text={task.text} done={task.done} key={task.id} id={task.id} dateAdded={task.dateAdded} dateCompleted={task.dateCompleted} dueBy={task.dueBy} />
                         })}
                     </div>
                     <button id="task-button" className="btn"><FontAwesomeIcon icon={faChevronCircleDown} /></button>

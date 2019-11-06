@@ -12,12 +12,12 @@ class App extends Component {
 
   state = {
     tasks: [
-      { text: "Second item added, first item to be completed", done: true, dateAdded: "2019-10-15", dateCompleted: "2019-10-18", dueBy: "2019-11-10", id: uuid() },
-      { text: "Fifth item added, not yet complete", done: false, dateAdded: "2019-10-23", dateCompleted: null, dueBy: "2019-11-15", id: uuid() },
-      { text: "Third item added, not completed", done: false, dateAdded: "2019-10-16", dateCompleted: null, dueBy: "2019-12-10", id: uuid() },
-      { text: "Fourth item added, second item completed", done: true, dateAdded: "2019-10-21", dateCompleted: "2019-10-25", dueBy: "2019-09-10", id: uuid() },
-      { text: "First item added, third item completed", done: true, dateAdded: "2019-09-28", dateCompleted: "2019-10-28", dueBy: "2019-12-31", id: uuid() },
-      { text: "Sixth item added, still to be completed", done: false, dateAdded: "2019-10-29", dateCompleted: null, dueBy: "2019-10-30", id: uuid() },
+      { text: "Second item added, first item to be completed", id: uuid(), done: true, dateAdded: "2019-10-15", dateCompleted: "2019-10-18", dueBy: "2019-11-10" },
+      { text: "Fifth item added, not yet complete", id: uuid(), done: false, dateAdded: "2019-10-23", dateCompleted: null, dueBy: "2019-11-15" },
+      { text: "Third item added, not completed", id: uuid(), done: false, dateAdded: "2019-10-16", dateCompleted: null, dueBy: "2019-12-10" },
+      { text: "Fourth item added, second item completed", id: uuid(), done: true, dateAdded: "2019-10-21", dateCompleted: "2019-10-25", dueBy: "2019-09-10" },
+      { text: "First item added, third item completed", id: uuid(), done: true, dateAdded: "2019-09-28", dateCompleted: "2019-10-28", dueBy: "2019-12-31" },
+      { text: "Sixth item added, still to be completed", id: uuid(), done: false, dateAdded: "2019-10-29", dateCompleted: null, dueBy: "2019-10-30" },
 
     ]
   }
@@ -48,15 +48,44 @@ class App extends Component {
   }
 
 
-  doneTask = () => {
+
+  doneTask = id => {
+    console.log("this is the id from doneTask " + id);
     const tasksCopy = this.state.tasks.slice();
-    tasksCopy.done = true
+    console.log(tasksCopy)
+
+    //if (task.id===id){ task.completed = true}
+
+    const updatedTasks = this.state.tasks.map(task => {
+      if (task.id === id) {
+      task.done = true;
+        //console.log(updatedTasks)
+      }
+      return task;
+
+    })
 
     this.setState({
-      tasks: tasksCopy
+      tasks: updatedTasks
     });
   }
 
+  deleteTask = id => {
+    //remove the task with the id in question from this.state.tasks
+    console.log("the id is" + id);
+    // filter to remove th task that we want to delete
+    //      {text: "walk cat", completed: false, date: new Date("2019-10-23"), id: uuid()},
+    //setState
+    const remainingTasks = this.state.tasks.filter(task => {
+
+      return task.id !== id
+    });
+
+
+    this.setState({
+      tasks: remainingTasks
+    })
+  }
 
   convertDates = (tasks) => {
     console.log('convertDates called')
@@ -87,7 +116,7 @@ class App extends Component {
         <Header />
         <AddTask addNewTaskFunc={this.addNewTask} />
         <RemainingTasks count={count} />
-        <TasksArea tasks={this.state.tasks} doneTaskFunc={this.doneTask} />
+        <TasksArea tasks={this.state.tasks} doneTaskFunc={this.doneTask} deleteTaskFunc={this.deleteTask} />
         <Footer />
 
       </div>

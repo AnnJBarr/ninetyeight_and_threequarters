@@ -7,7 +7,7 @@ class TaskItem extends React.Component {
 
     doneTask = () => {
         const tasksCopy = this.state.tasks.slice();
-        tasksCopy.completed = true
+        tasksCopy.done = true
 
         this.setState({
             tasks: tasksCopy
@@ -15,11 +15,13 @@ class TaskItem extends React.Component {
     }
 
     handleDoneClick = event => {
-        console.log("the done button was clicked " + event)
+        console.log("the done button was clicked ")
+        console.log(event)
         this.props.doneTaskFunc(this.props.id)
 
     }
 
+    
 
 
     render() {
@@ -41,7 +43,7 @@ class TaskItem extends React.Component {
                         </h6>}
                 </div>
                 <div className="col-1">
-                    {this.props.done === true ? <div id="doneid"></div> : <button id="icon-buttons" className="btn" onClick={this.handleDoneClick} ><FontAwesomeIcon icon={faClipboardCheck} /></button>}
+                    {this.props.done === true ? <div id="doneid"></div> : <button id="icon-buttons" className="btn" onClick={this.handleDoneClick} disabled={this.props.done}><FontAwesomeIcon icon={faClipboardCheck} /></button>}
                 </div>
                 <div className="col-1">
                     <button id="icon-buttons" className="btn" ><FontAwesomeIcon icon={faTrashAlt} /></button>
