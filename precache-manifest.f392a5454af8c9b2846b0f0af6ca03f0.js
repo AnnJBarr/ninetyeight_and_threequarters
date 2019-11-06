@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "217b67407a6b5445076e9c2f16ecf4f9",
+    "revision": "7ea0052a73017f962595f23cbe9ed04c",
     "url": "/ninetyeight_and_threequarters/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ninetyeight_and_threequarters/static/css/2.78f95891.chunk.css"
   },
   {
-    "revision": "5505da88297fb7f554e0",
+    "revision": "311c2f8981df807ea3d4",
     "url": "/ninetyeight_and_threequarters/static/css/main.b81ebfab.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ninetyeight_and_threequarters/static/js/2.1fa466df.chunk.js"
   },
   {
-    "revision": "5505da88297fb7f554e0",
-    "url": "/ninetyeight_and_threequarters/static/js/main.25f093d6.chunk.js"
+    "revision": "311c2f8981df807ea3d4",
+    "url": "/ninetyeight_and_threequarters/static/js/main.cb6fe8c8.chunk.js"
   },
   {
     "revision": "469fbad61625192f5997",
