@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/ninetyeight_and_threequarters/static/css/main.b81ebfab.chunk.css",
+    "main.js": "/ninetyeight_and_threequarters/static/js/main.25f093d6.chunk.js",
+    "main.js.map": "/ninetyeight_and_threequarters/static/js/main.25f093d6.chunk.js.map",
+    "runtime-main.js": "/ninetyeight_and_threequarters/static/js/runtime-main.fa508235.js",
+    "runtime-main.js.map": "/ninetyeight_and_threequarters/static/js/runtime-main.fa508235.js.map",
+    "static/css/2.78f95891.chunk.css": "/ninetyeight_and_threequarters/static/css/2.78f95891.chunk.css",
+    "static/js/2.1fa466df.chunk.js": "/ninetyeight_and_threequarters/static/js/2.1fa466df.chunk.js",
+    "static/js/2.1fa466df.chunk.js.map": "/ninetyeight_and_threequarters/static/js/2.1fa466df.chunk.js.map",
+    "index.html": "/ninetyeight_and_threequarters/index.html",
+    "precache-manifest.493188b0cd96ab424867dae8523fa526.js": "/ninetyeight_and_threequarters/precache-manifest.493188b0cd96ab424867dae8523fa526.js",
+    "service-worker.js": "/ninetyeight_and_threequarters/service-worker.js",
+    "static/css/2.78f95891.chunk.css.map": "/ninetyeight_and_threequarters/static/css/2.78f95891.chunk.css.map",
+    "static/css/main.b81ebfab.chunk.css.map": "/ninetyeight_and_threequarters/static/css/main.b81ebfab.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fa508235.js",
+    "static/css/2.78f95891.chunk.css",
+    "static/js/2.1fa466df.chunk.js",
+    "static/css/main.b81ebfab.chunk.css",
+    "static/js/main.25f093d6.chunk.js"
+  ]
+}
