@@ -59,7 +59,7 @@ class App extends Component {
     const updatedTasks = this.state.tasks.map(task => {
       if (task.id === id) {
       task.done = true;
-        //console.log(updatedTasks)
+      task.dateCompleted = new Date ()
       }
       return task;
 
