@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ninetyeight_and_threequarters/precache-manifest.ac7177afe74966b0cf0bac79b693257d.js"
+  "/ninetyeight_and_threequarters/precache-manifest.718454fe43211a5b31e659473b6c45b2.js"
 );
 
 self.addEventListener('message', (event) => {
