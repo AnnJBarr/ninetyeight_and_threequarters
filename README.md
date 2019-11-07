@@ -32,10 +32,10 @@ The application has been designed to
 - show the total number of tasks awaiting completion, list of tasks to complete sorted oldest - newest with due date in words, a list of completed tasks sorted newest completed - oldest completed with done date in words. Overdue tasks show due date in red and completed tasks show details with strikethrough (READ)
 - allow for the creation of new tasks whilst selecting a due by date. A task can not be added without text and max 160 characters available. Date selected cannot be before today. (CREATE)
 - allow for tasks to be marked as completed and the completed Date added to the data object (UPDATE)
-- allow for tasks to be deleted from either to do or completed tasks
+- allow for tasks to be deleted from either to do or completed tasks (DELETE)
 
 
-The application makes use of [React Infinite Calendar](https://www.npmjs.com/package/react-infinite-calendar), [Font Awesone] (https://www.npmjs.com/package/font-awesome) and [Moment](https://www.npmjs.com/package/moment).
+The application makes use of [React Infinite Calendar](https://www.npmjs.com/package/react-infinite-calendar), [Font Awesone](https://www.npmjs.com/package/font-awesome) and [Moment](https://www.npmjs.com/package/moment).
 
 
 ### Technology Used
@@ -51,7 +51,15 @@ This project uses the following technology:
 
 It has been designed and built with mobile-first reponsive principles in mind.
 
-(Maybe add photos here of different device sizes?)
+Photos of application running on a mobile.
+(https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/portraittop.png)
+(https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/portaitmid.png)
+(https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/portaitbottom.png)
+(https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/landscapetop.png)
+(https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/landscapemid1.png)
+(https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/landscapemid2.png)
+(https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/landscapemid3.png)
+(https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/landscapebottom.png)
 
 ### Running the application locally
 
