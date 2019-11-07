@@ -1,68 +1,70 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+# Todo Application - Frontend
 
-### `npm start`
+This is the front end of a Todo Application, built throughout the [Tech Returners](https://techreturners.com) Your Journey Into Tech course. It integrates with a backend, available [here](https://github.com/AnnJBarr/ninetyeight_and_threequarters).
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The hosted version of the application is available here: [https://AnnJBarr.github.io/ninetyeight_and_threequarters/](https://AnnJBarr.github.io/ninetyeight_and_threequarters/).
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+The application is called Ninety Eight & 3/4 Percent after a Dr Seuss quote. To be successful, challenges need to be broken up into steps we can take one after another, like the tasks on our to do list.
 
-### `npm test`
+*On and on you will hike* 
+*and I know you'll hike far* 
+*and face up to your problems* 
+*whatever they are.*
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*You'll get mixed up, of course,*
+*as you already know.*
+*You'll get mixed up* 
+*with many strange birds as you go.* 
+*So be sure when you step.*
+*Step with care and great tact* 
+*and remember that Life's a Great Balancing Act.*
+*Just never forget to be dexterous and deft.*
+*And never mix up your right foot with your left.*
 
-### `npm run build`
+*And will you succeed?* 
+*Yes! You will, indeed!* 
+*(98 and 3 / 4 percent guaranteed.)*
+Oh the places you’ll go - Dr Seuss
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The application has been designed to 
+- show the total number of tasks awaiting completion, list of tasks to complete sorted oldest - newest with due date in words, a list of completed tasks sorted newest completed - oldest completed with done date in words. Overdue tasks show due date in red and completed tasks show details with strikethrough (READ)
+- allow for the creation of new tasks whilst selecting a due by date. A task can not be added without text and max 160 characters available. Date selected cannot be before today. (CREATE)
+- allow for tasks to be marked as completed and the completed Date added to the data object (UPDATE)
+- allow for tasks to be deleted from either to do or completed tasks
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The application makes use of [React Infinite Calendar](https://www.npmjs.com/package/react-infinite-calendar), [Font Awesone] (https://www.npmjs.com/package/font-awesome) and [Moment](https://www.npmjs.com/package/moment).
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Technology Used
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This project uses the following technology:
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- ReactJS
+- JavaScript (ES2015+)
+- CSS
+- Webpack
+- Axios
+- ESLint
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+It has been designed and built with mobile-first reponsive principles in mind.
 
-## Learn More
+(Maybe add photos here of different device sizes?)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Running the application locally
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[Node.js](https://nodejs.org/en/) must be installed if not already.
 
-### Code Splitting
+Clone the application and install dependencies:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+    npm install
 
-### Analyzing the Bundle Size
+To start the application:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+    npm start
 
-### Making a Progressive Web App
+The application will then be accessible at:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[http://localhost:3000](http://localhost:3000)
