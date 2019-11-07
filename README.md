@@ -52,14 +52,14 @@ This project uses the following technology:
 It has been designed and built with mobile-first reponsive principles in mind.
 
 Photos of application running on a mobile.
-(https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/portraittop.png)
-(https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/portaitmid.png)
-(https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/portaitbottom.png)
-(https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/landscapetop.png)
-(https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/landscapemid1.png)
-(https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/landscapemid2.png)
-(https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/landscapemid3.png)
-(https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/landscapebottom.png)
+![App portrait](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/portraittop.png)
+![App portrait](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/portaitmid.png)
+![App portrait](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/portaitbottom.png)
+![App landscape](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/landscapetop.png)
+![App landscape](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/landscapemid1.png)
+![App landscape](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/landscapemid2.png)
+![App landscape](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/landscapemid3.png)
+![App landscape](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/landscapebottom.png)
 
 ### Running the application locally
 
