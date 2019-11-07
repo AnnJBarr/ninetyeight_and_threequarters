@@ -81,40 +81,40 @@ class AddTask extends React.Component {
                                     </div>
                                 </div>
                                 <div className="row">
-                                    <div className="col-4 col-lg-12">
-                                        <br />
-                                        <br />
-                                        Due by (please select)
+                                <div className="col-12 col-lg-4">
+                                    <br />
+                                    <br />
+                                    Due by (please select)
                                     </div>
-                                    <div className="col-5 col-lg-12">
-                                        <InfiniteCalendar className="form-control"
-                                            theme={{
-                                                selectionColor: 'rgb(128, 0, 128)',
-                                                textColor: {
-                                                    default: '#333',
-                                                    active: '#FFF'
-                                                },
-                                                weekdayColor: 'rgb(146, 118, 255)',
-                                                headerColor: 'rgb(128, 0, 128)',
-                                                floatingNav: {
-                                                    background: 'rgba(128, 0, 128, 0.96)',
-                                                    color: '#FFF',
-                                                    chevron: '#FFA726'
-                                                }
-                                            }}
-                                            displayOptions={{
-                                                layout: 'portrait',
-                                                showHeader: true,
-                                                shouldHeaderAnimate: false,
-                                                showWeekdays: false
-                                            }}
-                                            width={297}
-                                            height= {67}
-                                            rowHeight={32}
-                                            minDate={new Date()}
-                                            onSelect={this.handleInfiniteDateChange}
-                                        />
-                                    </div>
+                                <div className="col-12 col-lg-8">
+                                    <InfiniteCalendar className="form-control"
+                                        theme={{
+                                            selectionColor: 'rgb(128, 0, 128)',
+                                            textColor: {
+                                                default: '#333',
+                                                active: '#FFF'
+                                            },
+                                            weekdayColor: 'rgb(146, 118, 255)',
+                                            headerColor: 'rgb(128, 0, 128)',
+                                            floatingNav: {
+                                                background: 'rgba(128, 0, 128, 0.96)',
+                                                color: '#FFF',
+                                                chevron: '#FFA726'
+                                            }
+                                        }}
+                                        displayOptions={{
+                                            layout: 'portrait',
+                                            showHeader: true,
+                                            shouldHeaderAnimate: false,
+                                            showWeekdays: false
+                                        }}
+                                        width={297}
+                                        height={67}
+                                        rowHeight={32}
+                                        minDate={new Date()}
+                                        onSelect={this.handleInfiniteDateChange}
+                                    />
+                                </div>
                                 </div>
                                 <div className="col-12">
                                     <button className="btn btn-outline-light" onClick={this.handleClick} disabled={this.state.newItemText.length === 0 || this.state.newItemText.length > 160}>Add task</button>

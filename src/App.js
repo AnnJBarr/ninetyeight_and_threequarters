@@ -80,13 +80,21 @@ class App extends Component {
 
     const incompleteWithDateObj = this.convertDates(incompleteTasks);
 
+    const completedTasks = this.state.tasks.filter(task => {
+
+      return task.done;
+    });
+    const completedWithDateObj = this.convertDates(completedTasks);
+
     const count = incompleteWithDateObj.filter(item => item.done === false).length
+
+    const doneCount = completedWithDateObj.filter(item => item.done === true).length
 
     return (
       <div className="container">
         <Header />
         <AddTask addNewTaskFunc={this.addNewTask} />
-        <RemainingTasks count={count} />
+        <RemainingTasks count={count} doneCount={doneCount}/>
         <TasksArea tasks={this.state.tasks} doneTaskFunc={this.doneTask} deleteTaskFunc={this.deleteTask} />
         <Footer />
       </div>

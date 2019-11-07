@@ -7,7 +7,7 @@ class CompletedTasks extends React.Component {
     render() {
         const tasks = this.props.tasks;
         const dateSortedCompleted = tasks.sort((a, b) => b.dateCompleted - a.dateCompleted);
-
+console.log(dateSortedCompleted)
         return (
             <div id="done" className="card">
                 <div className="card-header">
