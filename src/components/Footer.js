@@ -5,7 +5,7 @@ import { faQuoteLeft, faQuoteRight} from '@fortawesome/free-solid-svg-icons';
 class Footer extends React.Component {
     render() {
         return (
-            <div className="row appRow d-none d-md-block">
+            <div className="row appRow">
                 <div className="mx-auto col-12 col-lg-9">
                     <div className="card bg-transparent text-white font-weight-lighter">
                         <div className="card-body">
