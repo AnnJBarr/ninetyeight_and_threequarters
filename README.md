@@ -42,8 +42,8 @@ The application makes use of [React Infinite Calendar](https://www.npmjs.com/pac
 
 Photos of application running on a mobile.
 ![App portrait](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/mobportraittop.jpeg)
-![App portrait](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/mobportaitmid.jpeg)
-![App portrait](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/mobportaitbottom.jpeg)
+![App portrait](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/mobportraitmid.jpeg)
+![App portrait](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/mobportraitbottom.jpeg)
 ![App landscape](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/moblandtop.jpeg)
 ![App landscape](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/moblandmid1.jpeg)
 ![App landscape](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/moblandmid2.jpeg)
