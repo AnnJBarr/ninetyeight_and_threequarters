@@ -11,7 +11,7 @@ class ToDoTasks extends React.Component {
         return (
             <div id="todo" className="card">
                 <div className="card-header">
-                    <h5 className="card-title">Tasks to do <FontAwesomeIcon icon={faClipboardList} /></h5>
+                    <h5 className="card-title">Tasks to do {this.props.count > 0 ? <span>({this.props.count})</span> : ""} <FontAwesomeIcon icon={faClipboardList} /></h5>
                 </div>
                 <div className="card-body">
                     <div className="card-text" >

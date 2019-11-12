@@ -10,7 +10,7 @@ class CompletedTasks extends React.Component {
         return (
             <div id="done" className="card">
                 <div className="card-header">
-                    <h5 className="card-title">Completed <FontAwesomeIcon icon={faClipboardCheck} /></h5>
+                    <h5 className="card-title">Completed {this.props.doneCount > 0 ? <span>({this.props.doneCount})</span> : ""} <FontAwesomeIcon icon={faClipboardCheck} /></h5>
                 </div>
                 <div className="card-body">
                     <div className="card-text">

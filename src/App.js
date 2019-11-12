@@ -109,7 +109,7 @@ class App extends Component {
         <Header />
         <AddTask addNewTaskFunc={this.addNewTask} />
         <RemainingTasks count={count} doneCount={doneCount}/>
-        <TasksArea tasks={this.state.tasks} doneTaskFunc={this.doneTask} unDoTaskFunc={this.undoTask} deleteTaskFunc={this.deleteTask} />
+        <TasksArea tasks={this.state.tasks} doneTaskFunc={this.doneTask} unDoTaskFunc={this.undoTask} deleteTaskFunc={this.deleteTask} count={count} doneCount={doneCount}/>
         <Footer />
       </div>
     );
