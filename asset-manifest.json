@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/ninetyeight_and_threequarters/static/css/main.e6ecb042.chunk.css",
-    "main.js": "/ninetyeight_and_threequarters/static/js/main.3adfb3e0.chunk.js",
-    "main.js.map": "/ninetyeight_and_threequarters/static/js/main.3adfb3e0.chunk.js.map",
+    "main.js": "/ninetyeight_and_threequarters/static/js/main.f0f9b6cf.chunk.js",
+    "main.js.map": "/ninetyeight_and_threequarters/static/js/main.f0f9b6cf.chunk.js.map",
     "runtime-main.js": "/ninetyeight_and_threequarters/static/js/runtime-main.fa508235.js",
     "runtime-main.js.map": "/ninetyeight_and_threequarters/static/js/runtime-main.fa508235.js.map",
     "static/css/2.78f95891.chunk.css": "/ninetyeight_and_threequarters/static/css/2.78f95891.chunk.css",
     "static/js/2.cb462310.chunk.js": "/ninetyeight_and_threequarters/static/js/2.cb462310.chunk.js",
     "static/js/2.cb462310.chunk.js.map": "/ninetyeight_and_threequarters/static/js/2.cb462310.chunk.js.map",
     "index.html": "/ninetyeight_and_threequarters/index.html",
-    "precache-manifest.3f2a66d728da2e4cd1ffbdd11d8d7e07.js": "/ninetyeight_and_threequarters/precache-manifest.3f2a66d728da2e4cd1ffbdd11d8d7e07.js",
+    "precache-manifest.1e53d6e5640e4dbd6039907ab4e47402.js": "/ninetyeight_and_threequarters/precache-manifest.1e53d6e5640e4dbd6039907ab4e47402.js",
     "service-worker.js": "/ninetyeight_and_threequarters/service-worker.js",
     "static/css/2.78f95891.chunk.css.map": "/ninetyeight_and_threequarters/static/css/2.78f95891.chunk.css.map",
     "static/css/main.e6ecb042.chunk.css.map": "/ninetyeight_and_threequarters/static/css/main.e6ecb042.chunk.css.map"
@@ -19,6 +19,6 @@
     "static/css/2.78f95891.chunk.css",
     "static/js/2.cb462310.chunk.js",
     "static/css/main.e6ecb042.chunk.css",
-    "static/js/main.3adfb3e0.chunk.js"
+    "static/js/main.f0f9b6cf.chunk.js"
   ]
 }
