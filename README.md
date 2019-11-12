@@ -41,14 +41,14 @@ It has been designed and built with mobile-first reponsive principles in mind.
 The application makes use of [React Infinite Calendar](https://www.npmjs.com/package/react-infinite-calendar), [Font Awesone](https://www.npmjs.com/package/font-awesome) and [Moment](https://www.npmjs.com/package/moment).
 
 Photos of application running on a mobile.
-![App portrait](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/portraittop.png)
-![App portrait](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/portaitmid.png)
-![App portrait](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/portaitbottom.png)
-![App landscape](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/landscapetop.png)
-![App landscape](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/landscapemid1.png)
-![App landscape](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/landscapemid2.png)
-![App landscape](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/landscapemid3.png)
-![App landscape](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/landscapebottom.png)
+![App portrait](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/mobportraittop.jpeg)
+![App portrait](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/mobportaitmid.jpeg)
+![App portrait](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/mobportaitbottom.jpeg)
+![App landscape](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/moblandtop.jpeg)
+![App landscape](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/moblandmid1.jpeg)
+![App landscape](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/moblandmid2.jpeg)
+![App landscape](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/moblandmid3.jpeg)
+![App landscape](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/moblandbottom.jpeg)
 
 ### Running the application locally
 
