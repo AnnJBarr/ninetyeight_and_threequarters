@@ -4,7 +4,7 @@ import { faNotesMedical } from '@fortawesome/free-solid-svg-icons';
 import InfiniteCalendar from 'react-infinite-calendar';
 import 'react-infinite-calendar/styles.css';
 import moment from "moment";
-
+import './AddTask.css';
 
 class AddTask extends React.Component {
 
@@ -81,13 +81,11 @@ class AddTask extends React.Component {
                                     </div>
                                 </div>
                                 <div className="row">
-                                <div className="col-12 col-lg-4">
-                                    <br />
-                                    <br />
+                                <div className="col-12 col-lg-3 my-3">
                                     Due by (please select)
                                     </div>
-                                <div className="col-12 col-lg-8 ">
-                                    <InfiniteCalendar className="form-control mx-sm-3 mb-2" 
+                                <div className="col-12 col-lg-8 my-3">
+                                    <InfiniteCalendar className="form-control"                                     
                                         theme={{
                                             selectionColor: 'rgb(128, 0, 128)',
                                             textColor: {
