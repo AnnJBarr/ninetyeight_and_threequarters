@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDotCircle, faClipboardCheck, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { faDotCircle, faClipboardCheck, faTrashAlt, faUndo } from '@fortawesome/free-solid-svg-icons';
 import moment from "moment";
 
 class TaskItem extends React.Component {
@@ -14,8 +14,21 @@ class TaskItem extends React.Component {
         });
     }
 
+    undoTask = () => {
+        const tasksCopy = this.state.tasks.slice();
+        tasksCopy.done = false
+
+        this.setState({
+            tasks: tasksCopy
+        });
+    }
+
     handleDoneClick = () => {
         this.props.doneTaskFunc(this.props.id)
+    }
+
+    handleUndoClick = () => {
+        this.props.unDoTaskFunc(this.props.id)
     }
 
     handleDelete = () => {
@@ -42,7 +55,7 @@ class TaskItem extends React.Component {
                         </h6>}
                 </div>
                 <div className="col-2 col-lg-1">
-                    {this.props.done === true ? <div id="doneid"></div> : <button id="icon-buttons" className="btn" onClick={this.handleDoneClick} disabled={this.props.done}><FontAwesomeIcon icon={faClipboardCheck} /></button>}
+                    {this.props.done === true ? <button id="icon-buttons" className="btn" onClick={this.handleUndoClick}><FontAwesomeIcon icon={faUndo} /></button> : <button id="icon-buttons" className="btn" onClick={this.handleDoneClick} disabled={this.props.done}><FontAwesomeIcon icon={faClipboardCheck} /></button>}
                 </div>
                 <div className="col-1">
                     <button id="icon-buttons" className="btn" onClick={this.handleDelete} ><FontAwesomeIcon icon={faTrashAlt} /></button>

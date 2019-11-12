@@ -53,6 +53,20 @@ class App extends Component {
     });
   }
 
+  undoTask = id => {
+    const undoTasks = this.state.tasks.map(task => {
+      if (task.id === id) {
+        task.done = false;
+        task.dateCompleted  = null; 
+      }
+      return task;
+    })
+
+    this.setState({
+      tasks: undoTasks
+    });
+  }
+
   deleteTask = id => {
     const remainingTasks = this.state.tasks.filter(task => {
       return task.id !== id
@@ -95,7 +109,7 @@ class App extends Component {
         <Header />
         <AddTask addNewTaskFunc={this.addNewTask} />
         <RemainingTasks count={count} doneCount={doneCount}/>
-        <TasksArea tasks={this.state.tasks} doneTaskFunc={this.doneTask} deleteTaskFunc={this.deleteTask} />
+        <TasksArea tasks={this.state.tasks} doneTaskFunc={this.doneTask} unDoTaskFunc={this.undoTask} deleteTaskFunc={this.deleteTask} />
         <Footer />
       </div>
     );

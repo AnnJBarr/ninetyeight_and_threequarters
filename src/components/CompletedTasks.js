@@ -15,7 +15,7 @@ class CompletedTasks extends React.Component {
                 <div className="card-body">
                     <div className="card-text">
                         {dateSortedCompleted.map(task => {
-                            return <TaskItem deleteTaskFunc={this.props.deleteTaskFunc} text={task.text} done={task.done} key={task.id} id={task.id} dateAdded={task.dateAdded} dateCompleted={task.dateCompleted} dueBy={task.dueBy} />
+                            return <TaskItem unDoTaskFunc={this.props.unDoTaskFunc} deleteTaskFunc={this.props.deleteTaskFunc} text={task.text} done={task.done} key={task.id} id={task.id} dateAdded={task.dateAdded} dateCompleted={task.dateCompleted} dueBy={task.dueBy} />
                         })}
                     </div>
                 </div>
