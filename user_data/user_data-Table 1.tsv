@@ -1,0 +1,5 @@
+username VARCHAR(15) NOT NULL	first_name VARCHAR(50)	last_name VARCHAR(50)	email_address			
+annb17	Ann	Barr	ann@someemail.com			
+iamauser	Carol	\N	carol@someemail.com			
+lizzieb	Lizzie	B	lizzie@otheremail.com			
+user123	Izzy	Decent	\N			
