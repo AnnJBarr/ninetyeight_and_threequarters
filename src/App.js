@@ -71,23 +71,32 @@ class App extends Component {
   }
 
   doneTask = id => {
-    const updatedTasks = this.state.tasks.map(task => {
-      if (task.task_id === id) {
-        task.done = true;
-        task.date_completed = new Date()
-      }
-      return task;
-    })
+    axios.put("https://xo0mntjodk.execute-api.eu-west-2.amazonaws.com/dev/tasks/" + id)
+      .then((response) => {
+        console.log(response)
+        console.log(id)
+        const updatedTasks = this.state.tasks.map(task => {
+          if (task.task_id === id) {
+            task.done = 1;
+            task.date_completed = new Date()
+          }
+          return task;
+        })
 
-    this.setState({
-      tasks: updatedTasks
-    });
+        this.setState({
+          tasks: updatedTasks
+        });
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   }
 
   undoTask = id => {
+    
     const undoTasks = this.state.tasks.map(task => {
       if (task.task_id === id) {
-        task.done = false;
+        task.done = 0;
         task.date_completed = null;
       }
       return task;
@@ -100,19 +109,19 @@ class App extends Component {
 
   deleteTask = id => {
     axios.delete("https://xo0mntjodk.execute-api.eu-west-2.amazonaws.com/dev/tasks/" + id)
-    .then((response) => {
-      console.log(response)
-      const remainingTasks = this.state.tasks.filter(task => {
+      .then((response) => {
+        console.log(response)
+        const remainingTasks = this.state.tasks.filter(task => {
           return task.task_id !== id
         });
-    
+
         this.setState({
           tasks: remainingTasks
         })
-    })
-    .catch((err)=> {
-      console.log(err)
-    })
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   }
 
   convertDates = (tasks) => {
