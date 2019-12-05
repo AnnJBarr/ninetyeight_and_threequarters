@@ -6,11 +6,11 @@ import CompletedTasks from "./CompletedTasks";
 class TasksArea extends React.Component {
     render() {
         const completedTasks = this.props.tasks.filter(t => {
-            return t.done === true;
+            return t.done === 1;
         });
 
         const incompleteTasks = this.props.tasks.filter(t => {
-            return t.done === false;
+            return t.done === 0;
         });
         return (
             <div className="row mx-auto appRow">

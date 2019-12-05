@@ -6,7 +6,7 @@ import { faClipboardCheck } from '@fortawesome/free-solid-svg-icons';
 class CompletedTasks extends React.Component {
     render() {
         const tasks = this.props.tasks;
-        const dateSortedCompleted = tasks.sort((a, b) => b.dateCompleted - a.dateCompleted);
+        const dateSortedCompleted = tasks.sort((a, b) => b.date_completed - a.date_completed);
         return (
             <div id="done" className="card">
                 <div className="card-header">
@@ -15,7 +15,7 @@ class CompletedTasks extends React.Component {
                 <div className="card-body">
                     <div className="card-text">
                         {dateSortedCompleted.map(task => {
-                            return <TaskItem unDoTaskFunc={this.props.unDoTaskFunc} deleteTaskFunc={this.props.deleteTaskFunc} text={task.text} done={task.done} key={task.id} id={task.id} dateAdded={task.dateAdded} dateCompleted={task.dateCompleted} dueBy={task.dueBy} />
+                            return <TaskItem unDoTaskFunc={this.props.unDoTaskFunc} deleteTaskFunc={this.props.deleteTaskFunc} text={task.task_name} done={task.done} key={task.task_id} id={task.task_id} dateAdded={task.date_added} dateCompleted={task.date_completed} dueBy={task.due_by} />
                         })}
                     </div>
                 </div>

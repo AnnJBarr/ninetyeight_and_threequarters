@@ -6,7 +6,7 @@ import { faClipboardList } from '@fortawesome/free-solid-svg-icons';
 class ToDoTasks extends React.Component {
     render() {
         const tasks = this.props.tasks;
-        const dateSortedIncomplete = tasks.sort((a, b) => a.dateAdded - b.dateAdded);
+        const dateSortedIncomplete = tasks.sort((a, b) => a.date_added - b.date_added);
 
         return (
             <div id="todo" className="card">
@@ -16,7 +16,7 @@ class ToDoTasks extends React.Component {
                 <div className="card-body">
                     <div className="card-text" >
                         {dateSortedIncomplete.map(task => {
-                            return <TaskItem doneTaskFunc={this.props.doneTaskFunc} deleteTaskFunc={this.props.deleteTaskFunc} text={task.text} done={task.done} key={task.id} id={task.id} dateAdded={task.dateAdded} dateCompleted={task.dateCompleted} dueBy={task.dueBy} />
+                            return <TaskItem doneTaskFunc={this.props.doneTaskFunc} deleteTaskFunc={this.props.deleteTaskFunc} text={task.task_name} done={task.done} key={task.task_id} id={task.task_id} dateAdded={task.date_added} dateCompleted={task.date_completed} dueBy={task.due_by} />
                         })}
                     </div>
                 </div>
