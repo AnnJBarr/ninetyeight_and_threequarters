@@ -2,7 +2,7 @@
 
 # Todo Application - Frontend
 
-This is the front end of a Todo Application, built throughout the [Tech Returners](https://techreturners.com) Your Journey Into Tech course. It integrates with a backend, available [here](https://github.com/AnnJBarr/ninetyeight_and_threequarters).
+This is the front end of a Todo Application, built throughout the [Tech Returners](https://techreturners.com) Your Journey Into Tech course. It integrates with a backend, available [here](https://github.com/AnnJBarr/back_end_ninety_eight_and_3-quarters).
 
 The hosted version of the application is available here: [https://AnnJBarr.github.io/ninetyeight_and_threequarters/](https://AnnJBarr.github.io/ninetyeight_and_threequarters/).
 
