@@ -38,7 +38,7 @@ This project uses the following technology:
 
 It has been designed and built with mobile-first reponsive principles in mind.
 
-The application makes use of [React Infinite Calendar](https://www.npmjs.com/package/react-infinite-calendar), [Font Awesone](https://www.npmjs.com/package/font-awesome) and [Moment](https://www.npmjs.com/package/moment).
+The application makes use of [React Infinite Calendar](https://www.npmjs.com/package/react-infinite-calendar), [Font Awesome](https://www.npmjs.com/package/font-awesome) and [Moment](https://www.npmjs.com/package/moment).
 
 Photos of application running on a mobile.
 ![App portrait](https://github.com/AnnJBarr/ninetyeight_and_threequarters/blob/master/public/mobportraittop.jpeg)
